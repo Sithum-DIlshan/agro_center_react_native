@@ -1,6 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeMain from '../views/HomeMain';
 import { Image } from 'react-native'
+import ProfileView from '../views/ProfileView';
 
 const Tab = createBottomTabNavigator();
 
@@ -26,7 +27,7 @@ export default function TabNavigator() {
         headerShown: false,
         tabBarIcon: (({ color }) => <Image source={require('../assets/profile.png')} style={{ width: 23, height: 26, tintColor: '#313131' }} />),
         tabBarLabel: '',
-      }} component={HomeMain} />
+      }} component={ProfileView} />
 
 
       {/* <Tab.Screen name="Settings" component={SettingsScreen} /> */}

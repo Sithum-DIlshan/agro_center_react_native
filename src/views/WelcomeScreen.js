@@ -1,4 +1,4 @@
-import { Alert, Dimensions, TouchableWithoutFeedback, Keyboard, KeyboardAvoidingView, Image, StyleSheet, Text, TextInput, TouchableOpacity, useWindowDimensions, View } from 'react-native'
+import { Alert, Dimensions, TouchableWithoutFeedback, Keyboard, KeyboardAvoidingView, Image, StyleSheet, Text, TextInput, TouchableOpacity, useWindowDimensions, View, ScrollView } from 'react-native'
 import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
 
@@ -27,7 +27,7 @@ export default function WelcomeScreen() {
         }
     }
     return (
-        <View style={{ flex: 1, backgroundColor: '#fff' }}>
+        <ScrollView contentContainerStyle={{ flex: 1, backgroundColor: '#fff' }}>
 
             <View style={{ justifyContent: 'center', alignItems: 'center', }}>
                 <Image source={require('../assets/leaf.png')} style={{ width: 202, height: 202, marginBottom: 20, marginTop: 30 }} />
@@ -37,11 +37,12 @@ export default function WelcomeScreen() {
                 </Text>
             </View>
 
-                <View style={{ alignItems: 'center', }}>
-                    <Image source={require('../assets/welcome.png')} style={{ width: 177, height: 54, marginBottom: 20, marginTop: 30 }} />
-                    <Text style={{ color: '#A6A6A6', fontSize: 16, fontWeight: '700' }}>Login to your account</Text>
+            <View style={{ alignItems: 'center', }}>
+                <Image source={require('../assets/welcome.png')} style={{ width: 177, height: 54, marginBottom: 20, marginTop: 30 }} />
+                <Text style={{ color: '#A6A6A6', fontSize: 16, fontWeight: '700' }}>Login to your account</Text>
 
-                    <View style={{
+                <KeyboardAvoidingView
+                    behavior={Platform.OS === 'ios' ? 'padding' : 'height'} style={{
                         height: height * 0.067,
                         width: width * 0.9,
                         backgroundColor: '#E1E5E2',
@@ -51,41 +52,41 @@ export default function WelcomeScreen() {
                         borderRadius: 10,
                         margin: 30
                     }}>
-                        <Image source={require('../assets/user.png')} style={{ width: 20, height: 20, marginLeft: 20 }} />
+                    <Image source={require('../assets/user.png')} style={{ width: 20, height: 20, marginLeft: 20 }} />
 
-                        <TextInput
-                            style={styles.input}
-                            onChangeText={onChangeName}
-                            value={name}
-                            placeholder="Full Name"
-                            placeholderTextColor={'#999898'}
-                        />
+                    <TextInput
+                        style={styles.input}
+                        onChangeText={onChangeName}
+                        value={name}
+                        placeholder="Full Name"
+                        placeholderTextColor={'#999898'}
+                    />
 
-                    </View>
+                </KeyboardAvoidingView>
 
-                    <View style={{
-                        height: height * 0.067,
-                        width: width * 0.9,
-                        backgroundColor: '#E1E5E2',
-                        alignItems: 'center',
-                        justifyContent: 'space-between',
-                        flexDirection: 'row',
-                        borderRadius: 10,
-                    }}>
-                        <Image source={require('../assets/lock.png')} style={{ width: 20, height: 20, marginLeft: 20 }} />
+                <View style={{
+                    height: height * 0.067,
+                    width: width * 0.9,
+                    backgroundColor: '#E1E5E2',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    flexDirection: 'row',
+                    borderRadius: 10,
+                }}>
+                    <Image source={require('../assets/lock.png')} style={{ width: 20, height: 20, marginLeft: 20 }} />
 
-                        <TextInput
-                            style={styles.input}
-                            onChangeText={onChangePassword}
-                            value={password}
-                            placeholder="Password"
-                            placeholderTextColor={'#999898'}
-                            secureTextEntry
-                        />
-
-                    </View>
+                    <TextInput
+                        style={styles.input}
+                        onChangeText={onChangePassword}
+                        value={password}
+                        placeholder="Password"
+                        placeholderTextColor={'#999898'}
+                        secureTextEntry
+                    />
 
                 </View>
+
+            </View>
 
             <View style={{ marginTop: 20, alignItems: 'center', }}>
                 <View style={{ width: width * 0.9, alignItems: 'flex-end', justifyContent: 'flex-start', }}>
@@ -100,7 +101,7 @@ export default function WelcomeScreen() {
                 </Text>
             </View>
 
-        </View>
+        </ScrollView>
     )
 }
 
