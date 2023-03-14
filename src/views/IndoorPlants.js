@@ -2,7 +2,7 @@ import { Dimensions, Image, ScrollView, StyleSheet, Text, TextInput, View } from
 import React from 'react'
 import PlantVarientCard from '../components/PlantVarientCard'
 import { useNavigation } from '@react-navigation/native'
-const vegImg = require('../assets/vege.png')
+const plant1 = require('../assets/plant1.png')
 const outdoor = require('../assets/outdoorPlant.png')
 const indoor = require('../assets/indoorPlant.png')
 
@@ -10,9 +10,8 @@ const width = Dimensions.get('window').width;
 const height = Dimensions.get('window').height;
 
 
-export default function HomeMain() {
+export default function IndoorPlants() {
   const navigation = useNavigation()
-
   return (
     <View style={{ flex: 1, backgroundColor: '#fff' }}>
       <ScrollView style={{ marginTop: 100 }} contentContainerStyle={{ justifyContent: 'center', alignItems: 'center', width: width }}>
@@ -40,10 +39,13 @@ export default function HomeMain() {
             placeholderTextColor={'#999898'}
           />
         </View>
-        <PlantVarientCard  image={vegImg} title={'Vegitables'} onPress={()=>navigation.navigate('IndoorPlants')}/>
-        <PlantVarientCard image={vegImg} title={'Fruits'} onPress={()=>navigation.navigate('IndoorPlants')}/>
-        <PlantVarientCard image={outdoor} title={'OutDoorPlants'} onPress={()=>navigation.navigate('IndoorPlants')}/>
-        <PlantVarientCard image={indoor} title={'InDoor Plants'} onPress={()=>navigation.navigate('IndoorPlants')}/>
+        <PlantVarientCard image={plant1} title={'Indoor Plants'} onPress={()=>navigation.navigate('DetailedView')}/>
+        <PlantVarientCard image={plant1} title={'Indoor Plants'} onPress={()=>navigation.navigate('DetailedView')}/>
+        <PlantVarientCard image={plant1} title={'Indoor Plants'} onPress={()=>navigation.navigate('DetailedView')}/>
+        <PlantVarientCard image={plant1} title={'Indoor Plants'} onPress={()=>navigation.navigate('DetailedView')}/>
+        <PlantVarientCard image={plant1} title={'Indoor Plants'} onPress={()=>navigation.navigate('DetailedView')}/>
+        <PlantVarientCard image={plant1} title={'Indoor Plants'} onPress={()=>navigation.navigate('DetailedView')}/>
+        <PlantVarientCard image={plant1} title={'Indoor Plants'} onPress={()=>navigation.navigate('DetailedView')}/>
       </ScrollView>
     </View>
   )
@@ -58,7 +60,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: '#F0F0F0',
     paddingLeft: 20,
-    color:'#000'
+    color: '#000'
 
   },
 })

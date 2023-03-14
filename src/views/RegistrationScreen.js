@@ -31,7 +31,7 @@ export default function RegistrationScreen() {
                         // onChangeText={onChangeNumber}
                         // value={number}
                         placeholder="Full Name"
-                        keyboardType="numeric"
+                        
                         placeholderTextColor={'#999898'}
                     />
                 </View>
@@ -52,7 +52,7 @@ export default function RegistrationScreen() {
                         // onChangeText={onChangeNumber}
                         // value={number}
                         placeholder="Email"
-                        keyboardType="numeric"
+                        
                         placeholderTextColor={'#999898'}
                     />
                 </View>
@@ -73,7 +73,7 @@ export default function RegistrationScreen() {
                         // onChangeText={onChangeNumber}
                         // value={number}
                         placeholder="Password"
-                        keyboardType="numeric"
+                        
                         placeholderTextColor={'#999898'}
                         secureTextEntry
                     />
@@ -95,7 +95,7 @@ export default function RegistrationScreen() {
                         // onChangeText={onChangeNumber}
                         // value={number}
                         placeholder="Confirm Password"
-                        keyboardType="numeric"
+                        
                         placeholderTextColor={'#999898'}
                         secureTextEntry
                     />
@@ -117,7 +117,7 @@ export default function RegistrationScreen() {
                         // onChangeText={onChangeNumber}
                         // value={number}
                         placeholder="Contact No"
-                        keyboardType="numeric"
+                        
                         placeholderTextColor={'#999898'}
                     />
                 </View>

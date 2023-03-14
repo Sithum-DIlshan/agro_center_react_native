@@ -2,7 +2,7 @@ import { Image, StyleSheet, Text, useWindowDimensions, View } from 'react-native
 import React from 'react'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 
-export default function PlantVarientCard({image, title}) {
+export default function PlantVarientCard({image, title, onPress}) {
     const { width, height } = useWindowDimensions()
 
     return (
@@ -15,7 +15,7 @@ export default function PlantVarientCard({image, title}) {
                 <Text style={{ fontSize: 14, fontWeight: '500', color: '#9D9999' }}>Lorem ipsum</Text>
             </View>
             <View style={{ flex: 2, justifyContent: 'center', alignItems: 'center', }}>
-                <TouchableOpacity style={{width:75, height:40, backgroundColor:'#325A3E', alignItems:'center', justifyContent:'center', borderRadius: 5,}}>
+                <TouchableOpacity onPress={onPress} style={{width:75, height:40, backgroundColor:'#325A3E', alignItems:'center', justifyContent:'center', borderRadius: 5,}}>
                     <Text style={{color:'#fff', fontWeight:'500', fontSize:16, }}>View</Text>
                 </TouchableOpacity>
             </View>

@@ -5,7 +5,7 @@ export default function Button({ onPress, title, color, isDisabled }) {
     const { width, height } = useWindowDimensions();
     return (
         <TouchableOpacity
-            style={[styles.button, { width: width * 0.7, backgroundColor: ' ' }]}
+            style={[styles.button, { width: width * 0.7, backgroundColor: '#325A3E' }]}
             onPress={onPress}
             disabled={isDisabled == null ? false : isDisabled}
         >

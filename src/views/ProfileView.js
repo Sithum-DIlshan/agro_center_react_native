@@ -1,6 +1,5 @@
 import { StyleSheet, ScrollView, Text, useWindowDimensions, TouchableOpacity, View, Image, TextInput, ActivityIndicator, ToastAndroid, Alert } from 'react-native'
 import React, { useMemo, useState } from 'react'
-import Button from '../components/Button';
 import { useEffect } from 'react';
 import Animated, {
     useSharedValue,
@@ -13,6 +12,7 @@ import Animated, {
     FadeOut,
     BounceIn
 } from 'react-native-reanimated';
+import Button from '../components/Button';
 
 
 const user = require('../assets/user1.png')
